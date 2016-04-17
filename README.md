@@ -1,6 +1,7 @@
 # CORBAC
 
-Minimalistic theme for hugo
+Minimalistic theme for [Hugo](http://gohugo.io/).
+Powered by [Bootstrap](http://getbootstrap.com/), [Font-Awesome](https://fortawesome.github.io/Font-Awesome/) and [jQuery](https://jquery.com/).
 
 example config.yaml :
 
