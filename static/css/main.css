@@ -1,0 +1,93 @@
+body {
+	font-family: 'Inconsolata', 'Arial';
+	color: #1F2429;
+}
+
+a {
+	color: #1F2429;
+	transition: all 0.2s;
+	font-weight: bold;
+}
+
+a:hover, a:focus {
+	background: #1F2429;
+	color: #fff;
+	text-decoration: none;
+}
+
+li {
+	list-style: none;
+}
+ul {
+	overflow-wrap: break-word;
+}
+
+li > a {
+	font-weight: normal;
+}
+
+#header {
+	margin-top: 100px;
+	margin-bottom: 50px;
+}
+
+#footer {
+	margin-top: 30px;
+}
+
+.theme-tabs {
+	border-bottom: 1px solid #1F2429;
+}
+
+.theme-tabs>li.active>a {
+	color: #1F2429;
+	border: 1px solid #1F2429;
+	border-bottom-color: transparent;
+	border-radius: 0px;
+}
+
+.theme-tabs>li.active>a:focus {
+	color: #1F2429;
+	border: 1px solid #1F2429;
+	border-bottom-color: transparent;
+	border-radius: 0px;
+}
+.theme-tabs>li.active>a:hover {
+	color: #1F2429;
+	border: 1px solid #1F2429;
+	border-bottom-color: transparent;
+	border-radius: 0px;
+}
+.theme-tabs>li>a:hover {
+	color: #fff;
+	background-color: #1F2429;
+	border: 1px solid #1F2429;
+	border-bottom-color: transparent;
+	border-radius: 0px;
+}
+
+.rss-list {
+	height: 300px;
+	width: 100%;
+	padding-top: 5px;
+	overflow-y: scroll;
+	overflow-x: hidden;
+}
+
+/* Scrollbar styles */
+::-webkit-scrollbar {
+	width: 2px;
+	height: 2px;
+}
+
+::-webkit-scrollbar-track {
+	border: 1px solid #fff;
+}
+
+::-webkit-scrollbar-thumb {
+	background: #1F2429;  
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: #88ba1c;  
+}
