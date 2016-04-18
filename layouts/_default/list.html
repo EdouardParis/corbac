@@ -1,0 +1,13 @@
+{{ partial "head.html" . }}
+<section class="container">
+  <div class="row">
+    <div class="col-md-8 col-md-offset-2">
+      <ul id="item">
+        {{ range .Data.Pages }}
+        <li>{{ .Render "li" }}</li>
+        {{ end }}
+      </ul>
+    </div>
+  </div>
+</section>
+{{ partial "footer.html" . }}

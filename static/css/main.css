@@ -22,8 +22,27 @@ ul {
 	overflow-wrap: break-word;
 }
 
-li > a {
+#header li > a {
 	font-weight: normal;
+}
+
+section, article {
+  padding-top: 100px;
+}
+
+article.li {
+  padding: 0px;
+}
+
+pre {
+  border-radius: 0px;
+  border: none;
+  background-color: #1F2429;
+}
+
+pre code {
+  color: #fff;
+  border-radius: 0px;
 }
 
 #header {
@@ -33,6 +52,10 @@ li > a {
 
 #footer {
 	margin-top: 30px;
+}
+
+.copyright {
+	border-top: 1px dotted #1F2429;
 }
 
 .theme-tabs {
@@ -90,4 +113,12 @@ li > a {
 
 ::-webkit-scrollbar-thumb:hover {
 	background: #88ba1c;  
+}
+
+.photography img {
+  max-width: 500px;
+}
+
+.article-body {
+  padding-top: 20px;
 }

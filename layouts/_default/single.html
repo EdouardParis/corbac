@@ -1,0 +1,27 @@
+{{ partial "head" . }}
+<article class="container">
+  <div class="row">
+    <div class="col-md-8 col-md-offset-2">
+      <div class="article-header">
+      <h3>
+      <a href="{{ .Permalink }}" class="clearfix">
+        {{ .Title }}
+      </a>
+      </h3>
+      <time>
+        <small>
+          {{ with .Site.Params.DateForm }}
+          {{ $.Date.Format . }}
+          {{ else }}
+          {{ $.Date.Format "Mon, Jan 2, 2006" }}
+          {{ end }}
+        </small>
+      </time>
+      </div>
+      <div class="article-body">
+        {{ .Content }}
+      </div>
+    </div>
+  </div>
+</article>
+{{ partial "footer" . }}
