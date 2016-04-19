@@ -14,5 +14,11 @@
 		<!-- Scripts -->
     <script src="{{ .Site.BaseURL }}/js/jquery-2.2.1.min.js"></script>
     <script src="{{ .Site.BaseURL }}/js/bootstrap.min.js"></script>
+    <script src="{{ .Site.BaseURL }}/js/main.js"></script>
 	</head>
-	<body>
+  <body>
+  {{ partial "sidebar" . }}
+  <div id="content">
+  <div class="menu">
+    <a class="menu-trigger"><i class="fa fa-bars menu-icon"></i><a>
+  </div>

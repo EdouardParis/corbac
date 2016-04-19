@@ -1,6 +1,7 @@
 body {
 	font-family: 'Inconsolata', 'Arial';
-	color: #1F2429;
+	color: #fff;
+  background-color: #1F2429;
 }
 
 a {
@@ -43,6 +44,44 @@ pre {
 pre code {
   color: #fff;
   border-radius: 0px;
+}
+
+/* Menu */
+nav#slide-menu {
+  position: fixed;
+  top: 0;
+  left: -100px;
+  bottom: 0;
+  display: block;
+  float: left;
+  width: 100%;
+  max-width: 284px;
+  height: 100%;
+  -moz-transition: all 300ms;
+  -webkit-transition: all 300ms;
+  transition: all 300ms;
+}
+div#content {
+  color: #1F2429;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 60px;
+  overflow: scroll;
+  background-color: #fff;
+  border-radius: 0;
+  -moz-transition: all 300ms;
+  -webkit-transition: all 300ms;
+  transition: all 300ms;
+}
+body.menu-active div#content {
+  left: 284px;
+}
+
+body.menu-active div#content .menu-trigger {
+  left: 294px;
 }
 
 #header {
