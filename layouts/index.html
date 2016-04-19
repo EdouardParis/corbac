@@ -1,81 +1,55 @@
 {{ partial "head.html" . }}
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.8.4/moment.min.js"></script>
-    <script src="{{ .Site.BaseURL }}/js/jquery.rss.min.js"></script>
-		<script>
-			jQuery(function($) {
-          $("#getpocket-rss").rss("{{ .Site.Params.PocketRSS }}",
-				{ limit: 30, entryTemplate:'<li><a href="{url}" target="_blank">{title}</a><br/><small>{shortBodyPlain} _ [{author}@{date}]</small></li>'})
-          $("#twitter-rss").rss("{{ .Site.Params.TwitterRSS }}",
-				{ limit: 25, entryTemplate:'<li><a href="{url}" target="_blank">{title}</a><br/><small>_ [{author}@{date}]</small></li>'})
-			})
-		</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.8.4/moment.min.js"></script>
+<script src="{{ .Site.BaseURL }}/js/jquery.rss.min.js"></script>
+<script>
+jQuery(function($) {
+    $("#getpocket-rss").rss("{{ .Site.Params.PocketRSS }}",
+      { limit: 30, entryTemplate:'<li><a href="{url}" target="_blank">{title}</a><br/><small>{shortBodyPlain} _ [{author}@{date}]</small></li>'})
+    $("#twitter-rss").rss("{{ .Site.Params.TwitterRSS }}",
+      { limit: 25, entryTemplate:'<li><a href="{url}" target="_blank">{title}</a><br/><small>_ [{author}@{date}]</small></li>'})
+    })
+</script>
 
-		<!-- Header -->
-		<header id="header">
-		<div class="container">
-			<div class="row">
-				<div class="col-md-8 col-md-offset-2">
-          <h1><a>{{ .Site.Title }}</a></h1>
-					<p>
-            {{ .Site.Params.Description }}<br />
-					</p>
-				</div>
-				<div class="col-md-8 col-md-offset-2">
-        {{ range $col := .Site.Params.Profiles }}   
-					<div class="col-md-3">
-						<ul class="list-unstyled">
-              {{ range $row := $col }} 
-              <li><a href="{{ .Url }}" target="_blank"><i class="fa fa-{{ .Icon }}"></i> {{ .Title }}</a></li>
-              {{ end }}
-						</ul>
-					</div>
-			  {{ end }}	
-				</div>
-			</div>
-		</div>
-		</header>
-		<body>
-			<div class="container">
-				<div class="row">
-					<div class="col-md-8 col-md-offset-2">
-						<div class="tab-content">
-							<div class="tab-pane active">
-								<!-- Nav tabs -->
-								<ul class="nav nav-tabs theme-tabs" role="tablist">
-									<li role="presentation" class="active"><a href="#twitter" aria-controls="twitter" role="tab" data-toggle="tab">
-										<i class="fa fa-twitter"></i><strong> Current tweets</strong>
-									</a></li>
-									<li role="presentation"><a href="#pocket" aria-controls="pocket" role="tab" data-toggle="tab">
-										<i class="fa fa-get-pocket"></i><strong> Current readings</strong>
-									</a></li>
-								</ul>
+<!-- Header -->
+<div class="container">
+  <div class="row">
+    <div class="col-md-8 col-md-offset-2">
+      <!-- Nav tabs -->
+      <ul class="nav nav-tabs theme-tabs" role="tablist">
+        <li role="presentation" class="active">
+        <a href="#twitter" aria-controls="twitter" role="tab" data-toggle="tab">
+          <i class="fa fa-twitter"></i><strong> Current tweets</strong>
+        </a></li>
+        <li role="presentation">
+        <a href="#pocket" aria-controls="pocket" role="tab" data-toggle="tab">
+          <i class="fa fa-get-pocket"></i><strong> Current readings</strong>
+        </a></li>
+      </ul>
 
-								<!-- Tab panes -->
-								<div class="tab-content">
-									<div role="tabpanel" class="tab-pane active" id="twitter">
-										<div class="rss-list">
-											<div class="list-unstyled" id="twitter-rss"></div>
-										</div>
-									</div>
-									<div role="tabpanel" class="tab-pane" id="pocket">
-										<div class="rss-list">
-											<div class="list-unstyled" id="getpocket-rss"></div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		<script>
-			(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-					(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-				m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      <!-- Tab panes -->
+      <div class="tab-content">
+        <div role="tabpanel" class="tab-pane active" id="twitter">
+          <div class="rss-list">
+            <div class="list-unstyled" id="twitter-rss"></div>
+          </div>
+        </div>
+        <div role="tabpanel" class="tab-pane" id="pocket">
+          <div class="rss-list">
+            <div class="list-unstyled" id="getpocket-rss"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+ (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+ m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+ })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-			ga('create', 'UA-59504280-1', 'auto');
-			ga('send', 'pageview');
+ga('create', 'UA-59504280-1', 'auto');
+ga('send', 'pageview');
 
-		</script>
+</script>
 {{ partial "footer.html" . }}

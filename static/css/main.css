@@ -4,27 +4,12 @@ body {
   background-color: #1F2429;
 }
 
-a {
-	color: #1F2429;
-	transition: all 0.2s;
-	font-weight: bold;
-}
-
-a:hover, a:focus {
-	background: #1F2429;
-	color: #fff;
-	text-decoration: none;
-}
-
 li {
 	list-style: none;
 }
+
 ul {
 	overflow-wrap: break-word;
-}
-
-#header li > a {
-	font-weight: normal;
 }
 
 section, article {
@@ -47,20 +32,32 @@ pre code {
 }
 
 /* Menu */
-nav#slide-menu {
-  position: fixed;
-  top: 0;
-  left: -100px;
-  bottom: 0;
-  display: block;
-  float: left;
-  width: 100%;
-  max-width: 284px;
-  height: 100%;
+.menu {
+  width: 20px;
+  height: 20px;
+  text-align:center;
   -moz-transition: all 300ms;
   -webkit-transition: all 300ms;
   transition: all 300ms;
 }
+
+.menu:hover {
+  color: #fff;
+  background-color: #1F2429;
+}
+
+nav.sidebar {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  display: block;
+  width: 100%;
+  float: left;
+  -moz-transition: all 300ms;
+  -webkit-transition: all 300ms;
+  transition: all 300ms;
+}
+
 div#content {
   color: #1F2429;
   position: fixed;
@@ -76,18 +73,49 @@ div#content {
   -webkit-transition: all 300ms;
   transition: all 300ms;
 }
+
 body.menu-active div#content {
-  left: 284px;
+  left: 50%;
 }
 
 body.menu-active div#content .menu-trigger {
   left: 294px;
 }
 
-#header {
+div#content a {
+	color: #1F2429;
+	transition: all 0.2s;
+	font-weight: bold;
+}
+
+div#content a:hover, a:focus {
+	background: #1F2429;
+	color: #fff;
+	text-decoration: none;
+}
+
+.sidebar {
+  font-family: 'Inconsolata', 'Arial';
 	margin-top: 100px;
 	margin-bottom: 50px;
+  color: #fff;
 }
+
+.sidebar a {
+  color: #fff;
+  font-weight: bold;
+}
+
+.sidebar li > a {
+	font-weight: normal;
+}
+
+.sidebar a:hover, a:focus {
+	background: #fff;
+	color: #1F2429;
+	text-decoration: none;
+}
+
 
 #footer {
 	margin-top: 30px;
@@ -134,7 +162,7 @@ body.menu-active div#content .menu-trigger {
 }
 
 .rss-list {
-	height: 300px;
+	height: 500px;
 	width: 100%;
 	padding-top: 5px;
 	overflow-y: scroll;
