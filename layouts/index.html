@@ -9,9 +9,27 @@ jQuery(function($) {
       { limit: 25, entryTemplate:'<li><a href="{url}" target="_blank">{title}</a><br/><small>_ [{author}@{date}]</small></li>'})
     })
 </script>
-
-<!-- Header -->
 <div class="container">
+  <div class="row">
+    <div class="col-md-8 col-md-offset-2">
+        <h1><a>{{ .Site.Title }}</a></h1>
+        <p>
+        {{ .Site.Params.Description }}<br />
+        </p>
+        {{ range $col := .Site.Params.Profiles }}   
+        <div class="col-md-4">
+          <ul class="list-unstyled">
+            {{ range $row := $col }} 
+            <li><a href="{{ .Url }}" target="_blank"><i class="fa fa-{{ .Icon }}"></i> {{ .Title }}</a></li>
+            {{ end }}
+          </ul>
+        </div>
+        {{ end }}	
+    </div>
+  </div>
+</div>
+<!-- Header -->
+<section class="container">
   <div class="row">
     <div class="col-md-8 col-md-offset-2">
       <!-- Nav tabs -->
@@ -41,7 +59,7 @@ jQuery(function($) {
       </div>
     </div>
   </div>
-</div>
+</section>
 <script>
 (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

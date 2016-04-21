@@ -75,7 +75,7 @@ div#content {
 }
 
 body.menu-active div#content {
-  left: 50%;
+  left: 50px;
 }
 
 body.menu-active div#content .menu-trigger {
