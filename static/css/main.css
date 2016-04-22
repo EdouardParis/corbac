@@ -101,16 +101,31 @@ div#content a:hover, a:focus {
   color: #fff;
 }
 
+.sidebar ul {
+  padding: 0px;
+}
+
+.sidebar li {
+  width: 50px;
+  font-size: 25px;
+  text-align: center;
+}
+
 .sidebar a {
-  color: #fff;
   font-weight: bold;
+  color: #fff;
 }
 
 .sidebar li > a {
 	font-weight: normal;
+  color: #fff;
 }
 
-.sidebar a:hover, a:focus {
+.sidebar li:hover > a {
+  color: #1F2429;
+}
+
+.sidebar li:hover, li:focus {
 	background: #fff;
 	color: #1F2429;
 	text-decoration: none;

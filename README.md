@@ -12,6 +12,12 @@ title: Edouard Paris
 copyright: "2016, Edouard Paris; all rights reserved."
 theme: corbac
 
+Menu:
+  main:
+    - Name: "Photography"
+      Pre: "camera-retro"
+      URL: "/photography/"
+
 Params:
   Description: " Engineering Student"
   TwitterRSS: "http://twitrss.me/twitter_user_to_rss/?user=Ed0Par"
