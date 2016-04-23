@@ -14,9 +14,12 @@ theme: corbac
 
 Menu:
   main:
-    - Name: "Photography"
-      Pre: "camera-retro"
-      URL: "/photography/"
+    - Name: "Tech"
+      Pre: "code"
+      URL: "/tech/"
+    - Name: "Contact"
+      Pre: "paper-plane-o"
+      URL: "/contact"
 
 Params:
   Description: " Engineering Student"
