@@ -17,7 +17,7 @@ jQuery(function($) {
         {{ .Site.Params.Description }}<br />
         </p>
         {{ range $col := .Site.Params.Profiles }}   
-        <div class="col-md-4">
+        <div class="col-md-3">
           <ul class="list-unstyled">
             {{ range $row := $col }} 
             <li><a href="{{ .Url }}" target="_blank"><i class="fa fa-{{ .Icon }}"></i> {{ .Title }}</a></li>

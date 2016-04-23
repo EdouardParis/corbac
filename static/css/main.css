@@ -13,7 +13,7 @@ ul {
 }
 
 section, article {
-  padding-top: 100px;
+  padding-top: 50px;
 }
 
 article.li {
@@ -177,7 +177,7 @@ div#content a:hover, a:focus {
 }
 
 .rss-list {
-	height: 500px;
+	height: 300px;
 	width: 100%;
 	padding-top: 5px;
 	overflow-y: scroll;
