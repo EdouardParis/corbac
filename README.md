@@ -1,12 +1,12 @@
 # CORBAC
 
 Minimalistic theme for [Hugo](http://gohugo.io/).
-Powered by [Bootstrap](http://getbootstrap.com/), [Font-Awesome](https://fortawesome.github.io/Font-Awesome/) and [jQuery](https://jquery.com/).
+Powered by [Bootstrap](http://getbootstrap.com/) and [Font-Awesome](https://fortawesome.github.io/Font-Awesome/).
 
 example config.yaml :
 
 ```
-baseurl: http://www.edouard.paris/
+baseurl: http://blog.edouard.paris/
 languageCode: en-us
 title: Edouard Paris
 copyright: "2016, Edouard Paris; all rights reserved."
@@ -14,21 +14,8 @@ theme: corbac
 
 Menu:
   main:
-    - Name: "Tech"
-      Pre: "code"
-      URL: "/tech/"
-    - Name: "Contact"
-      Pre: "paper-plane-o"
+    - Name: "blog"
+      URL: "/"
+    - Name: "contact"
       URL: "/contact"
-
-Params:
-  Description: " Engineering Student"
-  TwitterRSS: "http://twitrss.me/twitter_user_to_rss/?user=Ed0Par"
-  PocketRSS: "https://getpocket.com/users/*sso1451389163444dd7/feed/all"
-  Profiles: 
-    - 
-      - {Icon: twitter, Url: "https://twitter.com/Ed0Par", Title: Twitter}
-      - {Icon: instagram , Url: "https://www.instagram.com/ed0par/", Title: Instagram}
-    -
-      - {Icon: github, Url: "https://github.com/edouardparis", Title: GitHub}
 ```

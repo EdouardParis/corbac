@@ -2,7 +2,10 @@
 <section class="container">
   <div class="row">
     <div class="col-md-8 col-md-offset-2">
-      <ul id="item">
+      <div class="list-header">
+        <h3><a href="{{ .Permalink }}" class="clearfix">{{ .Title }}</a></h3>
+      </div>
+      <ul>
         {{ range .Data.Pages }}
         <li>{{ .Render "li" }}</li>
         {{ end }}

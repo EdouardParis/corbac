@@ -1,62 +1,12 @@
 {{ partial "head.html" . }}
-<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.8.4/moment.min.js"></script>
-<script src="{{ .Site.BaseURL }}/js/jquery.rss.min.js"></script>
-<script>
-jQuery(function($) {
-    $("#getpocket-rss").rss("{{ .Site.Params.PocketRSS }}",
-      { limit: 30, entryTemplate:'<li><a href="{url}" target="_blank">{title}</a><br/><small>{shortBodyPlain} _ [{author}@{date}]</small></li>'})
-    $("#twitter-rss").rss("{{ .Site.Params.TwitterRSS }}",
-      { limit: 25, entryTemplate:'<li><a href="{url}" target="_blank">{title}</a><br/><small>_ [{author}@{date}]</small></li>'})
-    })
-</script>
-<div class="container">
-  <div class="row">
-    <div class="col-md-8 col-md-offset-2">
-        <h1><a>{{ .Site.Title }}</a></h1>
-        <p>
-        {{ .Site.Params.Description }}<br />
-        </p>
-        {{ range $col := .Site.Params.Profiles }}   
-        <div class="col-md-3">
-          <ul class="list-unstyled">
-            {{ range $row := $col }} 
-            <li><a href="{{ .Url }}" target="_blank"><i class="fa fa-{{ .Icon }}"></i> {{ .Title }}</a></li>
-            {{ end }}
-          </ul>
-        </div>
-        {{ end }}	
-    </div>
-  </div>
-</div>
-<!-- Header -->
 <section class="container">
   <div class="row">
     <div class="col-md-8 col-md-offset-2">
-      <!-- Nav tabs -->
-      <ul class="nav nav-tabs theme-tabs" role="tablist">
-        <li role="presentation" class="active">
-        <a href="#twitter" aria-controls="twitter" role="tab" data-toggle="tab">
-          <i class="fa fa-twitter"></i><strong> Current tweets</strong>
-        </a></li>
-        <li role="presentation">
-        <a href="#pocket" aria-controls="pocket" role="tab" data-toggle="tab">
-          <i class="fa fa-get-pocket"></i><strong> Current readings</strong>
-        </a></li>
+      <ul>
+        {{ range .Data.Pages }}
+        <li>{{ .Render "li" }}</li>
+        {{ end }}
       </ul>
-
-      <!-- Tab panes -->
-      <div class="tab-content">
-        <div role="tabpanel" class="tab-pane active" id="twitter">
-          <div class="rss-list">
-            <div class="list-unstyled" id="twitter-rss"></div>
-          </div>
-        </div>
-        <div role="tabpanel" class="tab-pane" id="pocket">
-          <div class="rss-list">
-            <div class="list-unstyled" id="getpocket-rss"></div>
-          </div>
-        </div>
-      </div>
     </div>
   </div>
 </section>

@@ -11,14 +11,14 @@
 		<link rel="stylesheet" href="{{ .Site.BaseURL }}/css/font-awesome.min.css">
 		<link rel="stylesheet" href="{{ .Site.BaseURL }}/css/main.css" />
 
-		<!-- Scripts -->
-    <script src="{{ .Site.BaseURL }}/js/jquery-2.2.1.min.js"></script>
-    <script src="{{ .Site.BaseURL }}/js/bootstrap.min.js"></script>
-    <script src="{{ .Site.BaseURL }}/js/main.js"></script>
 	</head>
   <body>
-  {{ partial "sidebar" . }}
-  <div id="content">
-  <div class="menu">
-    <a class="menu-trigger"><i class="fa fa-bars menu-icon"></i></a>
-  </div>
+  <nav class="navbar">
+    <div class="container">
+      <ul class="nav navbar-nav navbar-right menu">
+        {{ range .Site.Menus.main }}
+        <li><small>/<a href="{{.URL}}">{{.Name}}</a></small></li>
+        {{ end }}
+      </ul>
+    </div>
+  </nav>
