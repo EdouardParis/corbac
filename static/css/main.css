@@ -99,6 +99,18 @@ code {
 	font-family: 'Inconsolata', 'Courier';
 }
 
+blockquote {
+  text-align: right;
+  border-left: none; 
+  border-right: 2px solid #1F2429; 
+  font-style: italic;
+  font-size: 15px;
+}
+
+hr {
+  border-top: 1px dashed #1F2429;
+}
+
 #footer {
 	padding-top: 25px;
 	padding-bottom: 50px;
