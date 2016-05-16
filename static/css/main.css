@@ -76,6 +76,14 @@ article.li {
   padding: 0px;
 }
 
+article img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
 pre {
   border-radius: 0px;
   border: none;
