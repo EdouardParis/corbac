@@ -1,6 +1,11 @@
+@font-face {
+  font-family: "Inconsolata";
+  src: url(/fonts/inconsolata/Inconsolata.otf) format("truetype");
+}
+
 body {
-	font-family: 'Inconsolata', 'Arial';
-	color: #1F2429;
+  font-family: 'Inconsolata', 'Arial';
+  color: #1F2429;
   background-color: #fff;
 }
 
@@ -10,21 +15,21 @@ h1, h2, h3, h4, h5, h6 {
 
 a {
   font-weight: bold;
-	color: #1F2429;
+  color: #1F2429;
 }
 
 a:hover, a:focus {
-	color: #fff;
-	background-color: #1F2429;
+  color: #fff;
+  background-color: #1F2429;
   text-decoration: none;
 }
 
 li {
-	list-style: none;
+  list-style: none;
 }
 
 ul {
-	overflow-wrap: break-word;
+  overflow-wrap: break-word;
   padding: 0;
 }
 
@@ -96,7 +101,7 @@ pre code {
 }
 
 code {
-	font-family: 'Inconsolata', 'Courier';
+  font-family: 'Inconsolata', 'Courier';
 }
 
 blockquote {
@@ -112,8 +117,8 @@ hr {
 }
 
 #footer {
-	padding-top: 25px;
-	padding-bottom: 50px;
+  padding-top: 25px;
+  padding-bottom: 50px;
 }
 
 .copyright {
@@ -121,7 +126,7 @@ hr {
 }
 
 .copyright li {
-	border-top: 1px solid #1F2429;
+  border-top: 1px solid #1F2429;
   padding: 0px;
 }
 
