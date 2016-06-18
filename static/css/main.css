@@ -60,7 +60,7 @@ table>tfoot>tr>td, .table>tfoot>tr>td {
 }
 
 .menu {
-  margin-top: 50px;
+  margin-top: 3em;
 }
 .menu a {
   font-weight: normal;
@@ -75,7 +75,7 @@ table>tfoot>tr>td, .table>tfoot>tr>td {
 }
 
 section, article {
-  padding-top: 50px;
+  padding-top: 3em;
 }
 
 article.li {
@@ -118,8 +118,8 @@ hr {
 }
 
 #footer {
-  padding-top: 25px;
-  padding-bottom: 50px;
+  padding-top: 2em;
+  padding-bottom: 2em;
 }
 
 .copyright {
