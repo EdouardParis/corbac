@@ -2,6 +2,9 @@
 <section class="container">
   <div class="row">
     <div class="col-md-8 col-md-offset-2">
+      <h3>
+        ~/<a href="{{ .Site.BaseURL }}">{{.Site.Title }}</a>
+      </h3>
       <ul>
         {{ range .Data.Pages }}
         <li>{{ .Render "li" }}</li>

@@ -59,17 +59,6 @@ table>tfoot>tr>td, .table>tfoot>tr>td {
   border-right: 1px dashed #1F2429;
 }
 
-.menu {
-  margin-top: 3em;
-}
-.menu a {
-  font-weight: normal;
-}
-
-.menu li {
-  padding-right: 10px;
-}
-
 .list-item {
   padding-top: 10px;
 }
@@ -88,6 +77,10 @@ article img {
   display: block;
   padding-top: 10px;
   padding-bottom: 10px;
+}
+
+.article-info a {
+  font-weight: normal;
 }
 
 pre {

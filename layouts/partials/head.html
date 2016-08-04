@@ -11,21 +11,3 @@
 
 	</head>
   <body>
-  <nav class="navbar">
-    <div class="container">
-      {{ if .Section }}
-      <ul class="nav navbar-nav navbar-left menu">
-        <li>
-          <small>
-            <a href="{{ .Site.BaseURL }}/{{ .Section }}"> /{{ .Section }} </a>
-          </small>
-        </li>
-      </ul>
-      {{ end }}
-      <ul class="nav navbar-nav navbar-right menu">
-        {{ range .Site.Menus.main }}
-        <li><small>/<a href="{{.URL}}">{{.Name}}</a></small></li>
-        {{ end }}
-      </ul>
-    </div>
-  </nav>

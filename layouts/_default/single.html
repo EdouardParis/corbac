@@ -4,7 +4,10 @@
     <div class="col-md-8 col-md-offset-2">
       <div class="article-header">
         <h3><a href="{{ .Permalink }}" class="clearfix">{{ .Title }}</a></h3>
-        <time>
+        <div class="article-info">
+          <small>
+            ~/<a href="{{ .Site.BaseURL }}">{{.Site.Title }}</a>/<a href="{{ .Site.BaseURL }}{{ .Section }}">{{ .Section }} </a>
+          </small> | 
           <small>
             {{ with .Site.Params.DateForm }}
             {{ $.Date.Format . }}
@@ -12,7 +15,7 @@
             {{ $.Date.Format "Mon, Jan 2, 2006" }}
             {{ end }}
           </small>
-        </time>
+        </div>
       </div>
       <div class="article-body">
         {{ .Content }}
